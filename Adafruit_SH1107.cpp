@@ -193,3 +193,11 @@ bool Adafruit_SH1107::begin(uint8_t addr, bool reset) {
 
   return true; // Success
 }
+
+void Adafruit_SH1107::enableDisplay(bool enable) {
+  if(enable) {
+    oled_command(SH110X_DISPLAYON);
+  } else {
+    oled_command(SH110X_DISPLAYOFF);
+  }
+}

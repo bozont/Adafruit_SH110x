@@ -132,5 +132,6 @@ public:
   ~Adafruit_SH1107(void);
 
   bool begin(uint8_t i2caddr = 0x3C, bool reset = true);
+  void enableDisplay(bool enable);
 };
 #endif // _Adafruit_SH110X_H_
