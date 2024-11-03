@@ -157,7 +157,7 @@ bool Adafruit_SH1107::begin(uint8_t addr, bool reset) {
   // clang-format off
   static const uint8_t init[] = {
       SH110X_DISPLAYOFF,               // 0xAE
-      SH110X_SETDISPLAYCLOCKDIV, 0x51, // 0xd5, 0x51,
+      SH110X_SETDISPLAYCLOCKDIV, 0xF0, // 0x5d, 0xF0 - prevents flickering (original value was 0x5d, 0x51)
       SH110X_MEMORYMODE,               // 0x20
       SH110X_SETCONTRAST, 0x4F,        // 0x81, 0x4F
       SH110X_DCDC, 0x8A,               // 0xAD, 0x8A
